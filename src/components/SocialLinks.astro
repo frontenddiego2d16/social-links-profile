@@ -1,0 +1,77 @@
+---
+interface Social {
+  social: string;
+  link: string;
+  icon: string;
+}
+
+const social: Social[] = [
+  {
+    social: "github",
+    link: "/",
+    icon: "fa-brands fa-github",
+  },
+  {
+    social: "frontend mentor",
+    link: "/",
+    icon: "fa-solid fa-code",
+  },
+  {
+    social: "linkedin",
+    link: "/",
+    icon: "fa-brands fa-linkedin-in",
+  },
+  {
+    social: "twitter",
+    link: "/",
+    icon: "fa-brands fa-twitter",
+  },
+  {
+    social: "instagram",
+    link: "/",
+    icon: "fa-brands fa-instagram",
+  },
+];
+---
+
+<ul class="p-5 flex flex-col gap-5">
+  {
+    social.map((item) => (
+      <li class="bg-gradient-to-r from-primary via-transparent to-secondary rounded-lg p-0.5 shadow-[0_0_15px] shadow-cyan-500">
+        <a
+          href={item.link}
+          class="bg-buttons flex justify-between px-3 rounded-lg py-3 relative z-10"
+        >
+          <p class="text-text-primary flex gap-3 items-center">
+            <i class={`${item.icon} text-primary`}></i>
+            <span class="text-text-primary text-xs tracking-wider uppercase">{item.social}</span>
+          </p>
+
+          <span class="text-secondary">
+            &gt;
+          </span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, cyan, purple);
+    border-radius: 8px;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+
+  a:hover::before{
+    width: 100%;
+  }
+
+</style>
