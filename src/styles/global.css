@@ -9,7 +9,7 @@
   --color-location: #EFFF4F;
   --color-text-primary: #F5F5F5;
   --animate-move-gradient: moveGradient 6s ease infinite;
-
+  --font-Inter: "Inter", sans-serif;
 
   @keyframes moveGradient {
     0% {
