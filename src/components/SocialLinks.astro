@@ -34,10 +34,10 @@ const social: Social[] = [
 ];
 ---
 
-<ul class="p-5 flex flex-col gap-5">
+<ul class="p-5 flex flex-col gap-7">
   {
     social.map((item) => (
-      <li class="bg-gradient-to-r from-primary via-transparent to-secondary rounded-lg p-0.5 shadow-[0_0_15px] shadow-cyan-500">
+      <li class="bg-gradient-to-r from-primary via-transparent to-secondary rounded-lg p-0.5">
         <a
           href={item.link}
           class="bg-buttons flex justify-between px-3 rounded-lg py-3 relative z-10"
@@ -47,7 +47,7 @@ const social: Social[] = [
             <span class="text-text-primary text-xs tracking-wider uppercase">{item.social}</span>
           </p>
 
-          <span class="text-secondary">
+          <span class="text-[#D7FF00]">
             &gt;
           </span>
         </a>
@@ -64,7 +64,7 @@ const social: Social[] = [
     left: 0;
     width: 0;
     height: 100%;
-    background: linear-gradient(to right, cyan, purple);
+    background: linear-gradient(to right, #0D1B14, #00FF66);
     border-radius: 8px;
     transition: width 0.3s ease;
     z-index: -1;
